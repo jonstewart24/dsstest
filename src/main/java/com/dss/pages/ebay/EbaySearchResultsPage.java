@@ -16,6 +16,12 @@ public class EbaySearchResultsPage extends BasePage {
 		super(driver);
 	}
 
+	/**
+	 * Click the product link to open a given product page.
+	 * 
+	 * @param resultNumber the number of the result item on the page.
+	 * @return EbayProductPage of the product
+	 */
 	public EbayProductPage openResult(int resultNumber) {
 		By result = By.id("srp-river-results-listing" + resultNumber);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(result));

@@ -32,7 +32,7 @@ public class BasePage {
 	/**
 	 * Wait for the element to be visible, then click the element.
 	 * 
-	 * @param element the element to click
+	 * @param element the By locator of the element to click
 	 */
 	public void clickElement(By element) {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
@@ -42,7 +42,7 @@ public class BasePage {
 	/**
 	 * Wait for the element to be visible, then click the element.
 	 * 
-	 * @param element the element to click
+	 * @param element the WebElement to click
 	 */
 	public void clickElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
@@ -50,10 +50,10 @@ public class BasePage {
 	}
 
 	/**
-	 * Wait for and return the webelement
+	 * Wait for and return the WebElement
 	 * 
-	 * @param element the element to get
-	 * @return the webelement
+	 * @param element the WebElement to get
+	 * @return the WebElement
 	 */
 	public WebElement getElement(By element) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(element));
